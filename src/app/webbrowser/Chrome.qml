@@ -30,7 +30,6 @@ ChromeBase {
     property alias searchUrl: navigationBar.searchUrl
     property alias text: navigationBar.text
     property alias bookmarked: navigationBar.bookmarked
-    signal closeTabRequested()
     signal toggleBookmark()
     signal toggleDownloads()
     property bool showDownloadButton: false
@@ -128,7 +127,6 @@ ChromeBase {
             }
             height: units.gu(6)
 
-            onCloseTabRequested: chrome.closeTabRequested()
             onToggleBookmark: chrome.toggleBookmark()
             onToggleDownloads: chrome.toggleDownloads()
         }
